@@ -1,0 +1,24 @@
+//Nodalo, rachel
+import java.util.Scanner;
+
+public class RunIntegers {
+    public static void main(String[] args) {
+        int start, end;
+
+        Scanner scan = new Scanner(System.in);
+
+        System.out.println("Enter Start:");
+        start = scan.nextInt();
+        System.out.println("Enter End:");
+        end = scan.nextInt();
+        System.out.println();
+
+        
+        while(start <= end){
+            System.out.println(start);
+            start = start + 1;
+        }
+    }
+}
+//this program will ask the user to input a number from the start 13to end, and it will loop from the number the user input in the start to end.
+//the "start=start + 1" is use to add one in every value to the loop until it reach the end of the loop. the loop will terminate when the the condition is false
