@@ -1,0 +1,18 @@
+//Nodalo, Rachel
+//this program will calculates the harmonic sum
+// the user prompt to enter a value for N use the loop to calculate the sum.
+import java.util.Scanner;
+
+public class HarmonicSum {
+  public static void main(String[] args) {
+    Scanner input = new Scanner(System.in);
+    System.out.print("Enter N: ");
+    int N = input.nextInt();
+    
+    double sum = 0.0;
+    for (int i = 1; i <= N; i++) {
+        sum += 1.0 / i;
+    }
+    System.out.println("Sum is: " + sum);
+  }
+}
