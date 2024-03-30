@@ -1,0 +1,29 @@
+//Nodalo,Rachel
+//in this program the shipping cost will depend on the weight of the item ordered. A mail order company charges $3.00 for handling, free shipping for orders 10 pounds or less, plus $0.25 for each pound over 10. 
+import java.util.Scanner;
+
+public class ShippingCostCalculator {
+    public static void main(String[] args) {
+        double weight, cost = 0, extraFee;
+
+        Scanner scan = new Scanner(System.in);
+        
+        System.out.println("Weight of Order:");//the user ask to input the weight of the order
+        weight = scan.nextDouble();
+
+        while(weight > 0){
+            cost = 3; //until the user enter 0 the loop will continues
+            
+            while(weight >  10){
+                cost = cost + 0.25; 
+                weight--; //calculate the shipping cost for weight thats over 10 pounds
+            }
+            System.out.printf("Shipping cost: $%.2f%n", cost);
+            System.out.println();
+            System.out.println("Weight of Order:"); 
+            weight = scan.nextDouble(); 
+        }
+        System.out.println("\nbye"); 
+    }
+}
+//in this program the user will be ask the user input the weight of the order using a while loop. the loop will terminate if the user will input a weight that is less than 0
