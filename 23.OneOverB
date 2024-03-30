@@ -1,0 +1,40 @@
+//Nodalo,Rachel
+import java.util.Scanner;
+
+public class OneOverB {
+    public static void main(String[] args) {
+        double x, B;
+        Scanner scan = new Scanner(System.in);
+
+        System.out.println("Enter B value: ");//the user is ask to input a integer
+        B = scan.nextDouble();
+
+        if(B == 0){
+            System.out.println("Anything divided by 0 is always undefined. Please enter another number greater than 0.");// this will print out if the user input 0
+            return;
+        }
+        else if(B > 1.0E10){
+            System.out.println("Number too big. Enter a smaller number.");// and if the user input a value that is greater than 1.0E10 the program will ask for a smaller number
+            return;
+        }
+
+
+        System.out.println("Enter your guess: ");
+        x = scan.nextDouble();//the the user will be ask to enter a guess
+
+        if(x > 1/B){
+            System.out.println("Your guess is out of range (0 - (1/B)). Try entering a smaller value");
+            return;//this will print out if the user input a value that is greater than 1/B.
+        }
+
+        double guess = x * (2 - B * x);
+        System.out.println(guess);
+
+
+        while(Math.abs(guess - x) >= 1.0E-14){
+            x = guess;
+            guess = x * (2 - B * x);
+            System.out.println(guess);
+        }
+    }
+} //then calculates the initial guess using the formula x * (2 - B * x)
