@@ -1,0 +1,24 @@
+//Nodalo,Rachel
+import java.util.Scanner;
+
+public class WedgeOfStars {
+    public static void main(String[] args) {
+        int n;
+
+        Scanner scan = new Scanner(System.in);
+        System.out.println("Number of stars:");
+        n = scan.nextInt();
+
+        while (n > 0) {
+            int x = n;
+            while (x > 0) {
+                System.out.print("*");
+                x--;
+            }
+            System.out.println(); 
+            n--; 
+        }
+    }
+}
+//this program aims to print out a wedge of stars,decrementing base on the value of the user input.
+//depending on the integer that the user input the star will decrease in everyline.
