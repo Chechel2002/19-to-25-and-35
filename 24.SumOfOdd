@@ -1,0 +1,25 @@
+//Nodalo,Rachel
+import java.util.Scanner;
+
+public class SumOfOdd {
+    public static void main(String[] args) {
+        int num, sum = 0, pow;
+
+        Scanner scan = new Scanner(System.in);
+
+        System.out.print("Enter N: ");//The user is ask to input N
+        num = scan.nextInt();
+        
+        for(int i = 1; i <= num; i++){
+            if(i % 2 == 1)
+                sum += i;
+        }// inside this loop it will check if the number the user provided is odd then add it to the sum.
+        //After the loop completes, it calculates the square of the input N and stores it in the variable pow.
+
+        pow = num * num;
+
+        System.out.println("Sum = " + sum);
+        System.out.println("N^2 = " + pow);
+    }
+}
+//This program calculates the sum of all odd numbers up to a given input N and also calculates the square of N
