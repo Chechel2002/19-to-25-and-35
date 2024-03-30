@@ -1,0 +1,20 @@
+//Nodalo,Rachel
+public class FiveLittleMonkeys {
+
+    public static void main(String[] args) {
+        for (int i = 5; i > 0; i--) {
+            if (i > 1) {
+                System.out.println(i + " little monkeys swinging in a tree");
+            } else {
+                System.out.println("One little monkey swinging in a tree");
+            }
+            System.out.println("Teasing Mr Crocodile \"you can't catch me\"");
+            System.out.println("Along came the crocodile as quiet as can be");
+            System.out.println("and SNAP!");
+            System.out.println();
+        }
+        System.out.println("No little monkeys swinging in a tree");
+        System.out.println("No little monkeys swinging in a tree");
+    }
+}
+//in this program using the for loop to countdown the from 5 to 1 and printout the lyrics of nursery rhyme"Five Little Monkeys" 
