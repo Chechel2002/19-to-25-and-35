@@ -1,0 +1,19 @@
+//Nodalo,Rachel
+public class DrugPotency{
+    public static void main(String[] args) {
+        final double rate = 0.04;//This defines the potency decrease rate
+        double effectiveness = 100;
+        int month = 0;
+
+ 
+        while(effectiveness > 50){
+            System.out.println("month: " + month + "\teffectiveness: " + effectiveness);
+            effectiveness = effectiveness - (effectiveness * rate);
+            month++;
+        }
+        System.out.println("month: " + month + "\teffectiveness: " + effectiveness + " DISCARDED");
+    }
+}
+//the loop prints the current month and effectiveness of the drug
+//then calculates the new effectiveness by reducing it by the rate of decrease.
+//the output will determine whether the drug is still effective or expired
