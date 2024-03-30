@@ -1,0 +1,32 @@
+//Nodallo,Rachel
+import java.util.*;
+
+public class MultiplicationQuiz {
+    public static void main(String[] args) {
+        int multiplicand, multiplier, correctAnswer, userAnswer, score = 0;
+
+        Scanner scan = new Scanner(System.in);
+        Random rand = new Random();
+
+        int count = 0;
+        while (count < 10) {
+            multiplicand = rand.nextInt(10);
+            multiplier = rand.nextInt(10);
+            correctAnswer = multiplicand * multiplier;
+
+            System.out.println("What is " + multiplicand + " * " + multiplier + " ?\t");
+            userAnswer = scan.nextInt();
+
+            if (userAnswer == correctAnswer) {
+                System.out.println("That is Correct!");
+                score++;
+            } else {
+                System.out.println("That is Wrong. " + multiplicand + " * " + multiplier + " is " + correctAnswer);
+            }
+            count++;
+        }
+        System.out.println("You got " + score + " out of 10 questions correct!");
+    }
+}
+//this program will generate a 10 item of multiplication quiz that use random class and generate random numbers.
+//when the user input a correct answer it'll printout "That is Correct" otherwise it printout that the user is wrong with the correct answer.
