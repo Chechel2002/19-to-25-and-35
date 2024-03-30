@@ -1,0 +1,26 @@
+//Nodalo,Rachel
+import java.util.Scanner;
+
+public class AddingUpIntegers{
+    public static void main(String[] args){
+        int num, addend, sum = 0;
+
+        Scanner scan = new Scanner(System.in);
+
+        System.out.println("How many integers will be added:");
+        num = scan.nextInt();
+
+        int count = 0;
+        while(count < num){
+            
+            System.out.println("Enter an integer:");
+            addend = scan.nextInt();
+            sum = sum + addend; 
+            count++;
+        } 
+        
+        System.out.println("The sum is " + sum);
+    }
+}
+//this program will ask the user to input how many numbers they will like to add.
+//using the addend to add the number/integer the user input to the sum
