@@ -1,0 +1,26 @@
+//Nodalo,Rachel
+//this program prompt the user to enter the an integer one at a time and will sum all the integer the user provided or enter 0 to exit or qiut.
+import java.util.Scanner;
+
+public class AddingIntegers {
+    public static void main(String[] args) {
+        int sum = 0, integer;
+
+        Scanner scan = new Scanner(System.in);
+         System.out.print("Enter first integer (enter 0 to quit): ");//asking the user to input the first integer
+         integer = scan.nextInt();
+         
+         if (integer != 0) {
+             while (integer != 0) {
+                 sum = sum + integer;//in this loop the program check if the first integer the user input is not zero
+                 //if its not zero then it will enter the loop and will ask to input more integers
+                  System.out.print("Enter an integer (or 0 to quit): ");
+                 integer = scan.nextInt();
+             }
+             System.out.println("Sum of the integers: " + sum);
+         } else {
+             System.out.println("No integers were entered.");
+         }
+             System.out.println("bye");
+    }
+}
