@@ -1,0 +1,26 @@
+/Nodalo,rachel
+import java.util.Scanner;
+
+public class OneLetterPerLine {
+    public static void main(String[] args) {
+        int word;
+        String input;
+
+        Scanner scan = new Scanner(System.in);
+
+        System.out.print("Enter a word: ");
+        input = scan.nextLine();
+
+        word = input.length();
+        
+        int count = 0;
+        while(count < word){
+            System.out.println(input.charAt(count));
+            
+            count = count + 1; 
+    }
+    }
+}
+//in this loop program the user will input a word and the output is to print the loop one character per line.
+//the input.length() here ill determine the length of what the user input.
+//and the "charAt(count)" is to print one letter or character per line.
