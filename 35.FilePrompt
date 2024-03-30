@@ -1,0 +1,38 @@
+// Nodalo,Rachel
+import java.util.Scanner;
+
+public class FilePrompt {
+
+    public static void main(String[] args) {
+        Scanner input = new Scanner(System.in);
+
+        String fileName = ""; //the user has to input a filename
+        String name = "";
+        String extension = "";
+
+        while (true) {
+            System.out.print("input file: ");
+            fileName = input.nextLine().trim();
+
+            if (fileName.indexOf(" ") != -1) {
+                System.out.println(">>>file name must not contain spaces<<<");// the user must not put any spaces in the file name
+            } else if (!fileName.endsWith(".dat")) {
+                System.out.println(">>>file name must end with .dat<<<");// the file name the user input must end with ".dat" otherwise it will not proceed to the file
+            } else if (fileName.equals(".dat")) {
+                System.out.println(">>>file name missing<<<");
+            } else {
+                int dotIndex = fileName.lastIndexOf(".");
+                name = fileName.substring(0, dotIndex);
+                extension = fileName.substring(dotIndex);
+
+                System.out.println("OK");
+                break;
+            }
+        }
+
+        System.out.println("Name: " + name);
+        System.out.println("Extension: " + extension);
+
+        input.close();
+    }
+}
