@@ -1,0 +1,27 @@
+import java.util.Scanner;
+
+public class BirthdayParadox{
+    public static void main(String[] args){
+        int guest, chance = 0;
+        double probability = 1;
+
+        Scanner scan = new Scanner(System.in);
+
+        System.out.print("Input number of guests: ");
+        guest = scan.nextInt();
+
+        for(int i = 1; i <= guest; i++){
+            probability *= (365.0 - i)/365.0;
+
+            if(probability >= 0.50){
+                chance = i + 1;
+                break;
+            }
+        }
+
+        System.out.println("In a gathering with a guest of " + guest + ", it will take " + chance + " be more than a 50% chance that none share a birthday");
+    }
+}
+//This program calculates the number of guests that need to be present in order for there to be more than a 50% chance that at least two guests share the same birthday
+//the user will input a number of guests then the program calculate the probability that none of the guests share a birthday by multiplying the probability by (365 - i)/365 for each additional guest.
+//Once the probability exceeds 0.50, the program terminates the loop and determines the number of guests.
